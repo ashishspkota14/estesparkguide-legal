@@ -6,19 +6,10 @@ Privacy Policy and Terms of Service for the **Estes Park Guide** mobile app.
 
 ## Pages
 
-| Page | URL |
-|------|-----|
-| **Privacy Policy** | [index.html](index.html) |
-| **Terms of Service** | [terms.html](terms.html) |
-
-## Links
-
-Once deployed via GitHub Pages, these pages are accessible at:
-
-- **Privacy Policy:** `https://<username>.github.io/estesparkguide-legal/`
-- **Terms of Service:** `https://<username>.github.io/estesparkguide-legal/terms.html`
-
-These URLs are submitted to the Apple App Store and Google Play Store during app review.
+| Page | Link |
+|------|------|
+| **Privacy Policy** | [https://ashishspkota14.github.io/estesparkguide-legal/](https://ashishspkota14.github.io/estesparkguide-legal/) |
+| **Terms of Service** | [https://ashishspkota14.github.io/estesparkguide-legal/terms.html](https://ashishspkota14.github.io/estesparkguide-legal/terms.html) |
 
 ## Contact
 
