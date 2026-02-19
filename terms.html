@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Estes Park Guide</title>
+  <meta name="description" content="Terms of Service for Estes Park Guide - Your hiking companion for Rocky Mountain National Park">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a6b4c;
+      --primary-light: #e8f0eb;
+      --primary-dark: #2d5440;
+      --text: #1a2e23;
+      --text-light: #5a6e62;
+      --bg: #fafbfa;
+      --white: #ffffff;
+      --border: #e2e8e4;
+      --accent: #8B6F47;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(58, 107, 76, 0.15);
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      color: #fff;
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    nav { display: flex; gap: 6px; }
+
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .hero .subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      position: relative;
+    }
+
+    .hero .last-updated {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      transition: box-shadow 0.2s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 20px rgba(58, 107, 76, 0.06);
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .icon {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .section ul li {
+      color: var(--text-light);
+      font-size: 14px;
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .section ul.dont-list li::before {
+      background: #dc2626;
+      opacity: 0.5;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border: 1px solid #f59e0b33;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .warning-box p {
+      color: #92400e;
+      font-size: 14px;
+    }
+
+    .contact-card {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 30px 24px 40px;
+      border-top: 1px solid var(--border);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer p { color: var(--text-light); font-size: 13px; }
+    footer a { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .section { padding: 22px 20px; }
+      .section h2 { font-size: 19px; }
+      .header-inner { padding: 12px 16px; }
+      nav a { font-size: 12px; padding: 5px 10px; }
+      .logo-text { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo-group" href="index.html">
+        <div class="logo-icon">🏔️</div>
+        <span class="logo-text">Estes Park Guide</span>
+      </a>
+      <nav>
+        <a href="index.html">Privacy</a>
+        <a href="terms.html" class="active">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Estes Park Guide — Your Hiking Companion</p>
+    <span class="last-updated">Last Updated: February 19, 2026</span>
+  </div>
+
+  <div class="content">
+
+    <!-- 1. Acceptance -->
+    <div class="section">
+      <h2><span class="icon">📋</span> 1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Estes Park Guide ("the App"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p>
+    </div>
+
+    <!-- 2. Service Description -->
+    <div class="section">
+      <h2><span class="icon">🏔️</span> 2. Service Description</h2>
+      <p>Estes Park Guide provides trail information, hiking guides, navigation assistance, user reviews, photo sharing, push notifications for trail and weather alerts, emergency SOS features, offline trail access, and promotional activities for trails in and around Estes Park and Rocky Mountain National Park.</p>
+    </div>
+
+    <!-- 3. User Accounts -->
+    <div class="section">
+      <h2><span class="icon">👤</span> 3. User Accounts</h2>
+      <p>To access certain features, you must create an account. You agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information</li>
+        <li>Keep your password secure and confidential</li>
+        <li>Maintain only one account per person</li>
+        <li>Be at least 13 years old to create an account</li>
+      </ul>
+    </div>
+
+    <!-- 4. Acceptable Use -->
+    <div class="section">
+      <h2><span class="icon">✅</span> 4. Acceptable Use</h2>
+      <p>When using the App, you agree not to:</p>
+      <ul class="dont-list">
+        <li>Upload harmful, offensive, or illegal content</li>
+        <li>Post false or misleading trail information</li>
+        <li>Spam, harass, or impersonate other users</li>
+        <li>Attempt to reverse engineer or exploit the App</li>
+        <li>Violate the rights or privacy of others</li>
+      </ul>
+    </div>
+
+    <!-- 5. User Content -->
+    <div class="section">
+      <h2><span class="icon">📸</span> 5. User Content</h2>
+      <p>By submitting reviews, photos, or other content, you grant Estes Park Guide a non-exclusive, worldwide, royalty-free license to use, display, and distribute your content within the App. You retain ownership of your content and can delete it at any time.</p>
+      <p>You may upload photos of businesses, trails, and locations. By uploading, you confirm that you own the photo or have permission to share it. Photos may be displayed alongside other photos from Google Places and other users. We reserve the right to remove photos that are inappropriate, misleading, or violate these terms. Certain photos sourced from Google are cached locally on your device solely for offline viewing and are not redistributed.</p>
+    </div>
+
+    <!-- 6. Notifications & Alerts -->
+    <div class="section">
+      <h2><span class="icon">🔔</span> 6. Notifications &amp; Alerts</h2>
+      <p>The App may send push notifications including trail condition alerts, severe weather warnings, and hiking milestone updates. You can control notification preferences in Settings.</p>
+      <p>Weather alerts are sourced from the National Weather Service and may be automatically translated to your preferred language. While we strive for accuracy, translated alerts are provided for convenience and the original English alert from NWS should be considered authoritative. Weather alerts are not a guarantee of safety — always check official sources and use your own judgment.</p>
+    </div>
+
+    <!-- 7. Safety Disclaimer -->
+    <div class="section">
+      <h2><span class="icon">⚠️</span> 7. Safety Disclaimer</h2>
+      <div class="warning-box">
+        <p><strong>Important:</strong> The App provides trail information for reference purposes only. Trail conditions can change rapidly. Always check current conditions with park authorities before hiking. The App is not a substitute for proper hiking preparation, navigation tools, or emergency services.</p>
+      </div>
+    </div>
+
+    <!-- 8. Emergency Features -->
+    <div class="section">
+      <h2><span class="icon">🆘</span> 8. Emergency Features</h2>
+      <p>The SOS feature sends your location to your designated emergency contacts via SMS. It relies on cellular connectivity and may not work in areas with no signal. The SOS feature caches alerts for later delivery when offline, but this may result in delayed notifications.</p>
+      <p>The satellite SOS guidance provided in the App is informational only — it directs you to your phone's built-in satellite features and is not a substitute for dedicated emergency communication devices. The App is not a replacement for calling 911 or using dedicated satellite communicators such as Garmin inReach or SPOT in backcountry areas.</p>
+    </div>
+
+    <!-- 9. Promotions -->
+    <div class="section">
+      <h2><span class="icon">🎉</span> 9. Promotions &amp; Winner Display</h2>
+      <p>By participating in promotions such as the Weekly Photo Draw, you agree that Estes Park Guide may publicly display your name and profile photo to announce winners. This includes displaying winners within the app (visible to all users), in emails, and on social media.</p>
+      <p>A list of past winners may be shown to all users to maintain transparency. No additional personal information will be shared. You may opt out of future promotions at any time by contacting support.</p>
+    </div>
+
+    <!-- 10. Disclaimer of Warranties -->
+    <div class="section">
+      <h2><span class="icon">📜</span> 10. Disclaimer of Warranties</h2>
+      <p>The App is provided "as is" without warranties of any kind. We do not guarantee the accuracy of trail information, weather alerts, translated content, or user-generated content. Hiking involves inherent risks, and you assume all responsibility for your safety on trails.</p>
+    </div>
+
+    <!-- 11. Limitation of Liability -->
+    <div class="section">
+      <h2><span class="icon">⚖️</span> 11. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Estes Park Guide shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including but not limited to injuries, property damage, loss of data, delayed emergency notifications, or inaccurate weather or trail information.</p>
+    </div>
+
+    <!-- 12. Termination -->
+    <div class="section">
+      <h2><span class="icon">🚫</span> 12. Termination</h2>
+      <p>We may suspend or terminate your account at any time for violation of these terms. You may delete your account at any time through the App settings or by contacting support.</p>
+    </div>
+
+    <!-- 13. Changes to Terms -->
+    <div class="section">
+      <h2><span class="icon">🔄</span> 13. Changes to Terms</h2>
+      <p>We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms. We will notify you of significant changes through the App.</p>
+    </div>
+
+    <!-- 14. Contact Us -->
+    <div class="section">
+      <h2><span class="icon">📧</span> 14. Contact Us</h2>
+      <p>If you have questions about these Terms, please contact us:</p>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:estesparkvisit@gmail.com">estesparkvisit@gmail.com</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Estes Park Guide. All rights reserved.</p>
+    <p style="margin-top: 6px;"><a href="index.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>

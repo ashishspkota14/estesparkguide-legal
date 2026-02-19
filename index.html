@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Estes Park Guide</title>
+  <meta name="description" content="Privacy Policy for Estes Park Guide - Your hiking companion for Rocky Mountain National Park">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a6b4c;
+      --primary-light: #e8f0eb;
+      --primary-dark: #2d5440;
+      --text: #1a2e23;
+      --text-light: #5a6e62;
+      --bg: #fafbfa;
+      --white: #ffffff;
+      --border: #e2e8e4;
+      --accent: #8B6F47;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--primary);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(58, 107, 76, 0.15);
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      color: #fff;
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 6px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .hero .subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .hero .last-updated {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    /* ── Content ── */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      transition: box-shadow 0.2s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 20px rgba(58, 107, 76, 0.06);
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .icon {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .section ul li {
+      color: var(--text-light);
+      font-size: 14px;
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .contact-card {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 30px 24px 40px;
+      border-top: 1px solid var(--border);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .section { padding: 22px 20px; }
+      .section h2 { font-size: 19px; }
+      .header-inner { padding: 12px 16px; }
+      nav a { font-size: 12px; padding: 5px 10px; }
+      .logo-text { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo-group" href="index.html">
+        <div class="logo-icon">🏔️</div>
+        <span class="logo-text">Estes Park Guide</span>
+      </a>
+      <nav>
+        <a href="index.html" class="active">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Estes Park Guide — Your Hiking Companion</p>
+    <span class="last-updated">Last Updated: February 19, 2026</span>
+  </div>
+
+  <div class="content">
+
+    <!-- Introduction -->
+    <div class="section">
+      <h2><span class="icon">👋</span> Introduction</h2>
+      <p>Welcome to Estes Park Guide. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.</p>
+    </div>
+
+    <!-- Account Information -->
+    <div class="section">
+      <h2><span class="icon">👤</span> Account Information</h2>
+      <p>When you create an account, we collect:</p>
+      <ul>
+        <li>Email address</li>
+        <li>Password (encrypted and securely stored)</li>
+        <li>Profile name (optional)</li>
+        <li>Profile photo (optional)</li>
+      </ul>
+    </div>
+
+    <!-- Location Data -->
+    <div class="section">
+      <h2><span class="icon">📍</span> Location Data</h2>
+      <p>With your permission, we collect location data to:</p>
+      <ul>
+        <li>Show nearby trails and trailheads</li>
+        <li>Track your hiking progress</li>
+        <li>Provide emergency SOS features</li>
+        <li>Share your location with emergency contacts (when enabled)</li>
+      </ul>
+    </div>
+
+    <!-- Usage Data -->
+    <div class="section">
+      <h2><span class="icon">📊</span> Usage Data</h2>
+      <p>We automatically collect information about how you use the app:</p>
+      <ul>
+        <li>Trails viewed and saved</li>
+        <li>Hikes completed</li>
+        <li>Reviews and ratings submitted</li>
+        <li>Photos uploaded</li>
+      </ul>
+    </div>
+
+    <!-- Device & Notification Data -->
+    <div class="section">
+      <h2><span class="icon">📱</span> Device &amp; Notification Data</h2>
+      <p>To provide notifications and improve your experience, we collect:</p>
+      <ul>
+        <li>Push notification token (for delivering notifications)</li>
+        <li>Device platform (iOS or Android)</li>
+        <li>Language preference</li>
+        <li>Subscription plan type</li>
+      </ul>
+    </div>
+
+    <!-- How We Use Your Information -->
+    <div class="section">
+      <h2><span class="icon">🔧</span> How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and maintain our services</li>
+        <li>Personalize your experience</li>
+        <li>Track your hiking achievements</li>
+        <li>Send trail alerts, weather warnings, and hiking milestone notifications</li>
+        <li>Enable emergency SOS and safety features</li>
+        <li>Improve our app and develop new features</li>
+        <li>Deliver notifications in your preferred language</li>
+        <li>Provide weather alerts for your safety</li>
+      </ul>
+    </div>
+
+    <!-- Emergency & Safety Features -->
+    <div class="section">
+      <h2><span class="icon">🆘</span> Emergency &amp; Safety Features</h2>
+      <p><strong>SOS Alerts:</strong> When you trigger an SOS alert, we collect and share your precise location with your designated emergency contacts via SMS. This data is stored securely and cached locally on your device if you are offline, then sent automatically when connectivity is restored.</p>
+      <p><strong>Emergency Contacts:</strong> You may add emergency contacts who can be notified in case of emergency. Their contact information is stored securely on our servers and cached locally on your device for offline access. Cached contacts are synced to the server when you reconnect.</p>
+    </div>
+
+    <!-- Push Notifications -->
+    <div class="section">
+      <h2><span class="icon">🔔</span> Push Notifications</h2>
+      <p>We send push notifications for trail alerts, weather warnings, and hiking milestones. You can control which notifications you receive in Settings. Weather alerts may bypass quiet hours for your safety. We use Expo Push Notification service to deliver notifications to your device.</p>
+      <p><strong>Weather Alerts:</strong> We check the National Weather Service (NWS) API every 30 minutes for active weather alerts in the Estes Park area. When a new alert is found, we send a push notification to all users with weather alerts enabled. We do not share your data with NWS.</p>
+    </div>
+
+    <!-- Language & Translation -->
+    <div class="section">
+      <h2><span class="icon">🌐</span> Language &amp; Translation</h2>
+      <p>When you select a language preference, this preference is synced to our server so we can deliver notifications in your chosen language. Alert content is translated using Google Cloud Translation API. Your language preference is the only data shared with Google for this purpose.</p>
+    </div>
+
+    <!-- Offline Data Storage -->
+    <div class="section">
+      <h2><span class="icon">📥</span> Offline Data Storage</h2>
+      <p>Certain data is stored locally on your device for offline access, including emergency contacts, SOS alerts (sent when back online), notification settings, and trail/business photos for offline viewing. Cached photos from third-party sources such as Google are stored solely for personal offline use and are not redistributed. This data remains on your device and is synced to our servers when connectivity is available.</p>
+    </div>
+
+    <!-- Data Storage & Security -->
+    <div class="section">
+      <h2><span class="icon">🔒</span> Data Storage &amp; Security</h2>
+      <p>We use industry-standard security measures to protect your data:</p>
+      <ul>
+        <li>All data is encrypted in transit using SSL/TLS</li>
+        <li>Passwords are hashed and salted</li>
+        <li>Data is stored on secure servers (Supabase)</li>
+        <li>We regularly audit our security practices</li>
+        <li>Offline cached data is stored locally on your device</li>
+      </ul>
+    </div>
+
+    <!-- Your Rights & Choices -->
+    <div class="section">
+      <h2><span class="icon">✅</span> Your Rights &amp; Choices</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Correct inaccurate information</li>
+        <li>Delete your account and associated data</li>
+        <li>Opt out of notifications via Settings</li>
+        <li>Disable location services</li>
+        <li>Export your data at any time</li>
+      </ul>
+      <p>To exercise these rights, please contact us at <a href="mailto:estesparkvisit@gmail.com">estesparkvisit@gmail.com</a></p>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="section">
+      <h2><span class="icon">📧</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us:</p>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:estesparkvisit@gmail.com">estesparkvisit@gmail.com</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Estes Park Guide. All rights reserved.</p>
+    <p style="margin-top: 6px;"><a href="index.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>
