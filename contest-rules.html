@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contest Rules — Estes Park Guide</title>
+  <meta name="description" content="Official Rules for the Weekly Photo Draw contest in Estes Park Guide">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a6b4c;
+      --primary-light: #e8f0eb;
+      --primary-dark: #2d5440;
+      --text: #1a2e23;
+      --text-light: #5a6e62;
+      --bg: #fafbfa;
+      --white: #ffffff;
+      --border: #e2e8e4;
+      --accent: #8B6F47;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(58, 107, 76, 0.15);
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      color: #fff;
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    nav { display: flex; gap: 6px; }
+
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .hero .subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      position: relative;
+    }
+
+    .hero .last-updated {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      transition: box-shadow 0.2s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 20px rgba(58, 107, 76, 0.06);
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .icon {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .section a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--primary-light);
+      border: 1px solid rgba(58, 107, 76, 0.15);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    .highlight-box p {
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border: 1px solid #f59e0b33;
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    .warning-box p {
+      color: #92400e;
+      font-size: 14px;
+    }
+
+    .warning-box a {
+      color: #92400e;
+      font-weight: 600;
+    }
+
+    .contact-card {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 30px 24px 40px;
+      border-top: 1px solid var(--border);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer p { color: var(--text-light); font-size: 13px; }
+    footer a { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .section { padding: 22px 20px; }
+      .section h2 { font-size: 19px; }
+      .header-inner { padding: 12px 16px; }
+      nav a { font-size: 12px; padding: 5px 10px; }
+      .logo-text { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo-group" href="index.html">
+        <div class="logo-icon">🏔️</div>
+        <span class="logo-text">Estes Park Guide</span>
+      </a>
+      <nav>
+        <a href="index.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contest-rules.html" class="active">Contest</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Weekly Photo Draw</h1>
+    <p class="subtitle">Official Contest Rules</p>
+    <span class="last-updated">Last Updated: February 25, 2026</span>
+  </div>
+
+  <div class="content">
+
+    <!-- No Purchase Necessary -->
+    <div class="section">
+      <div class="highlight-box">
+        <p><strong>NO PURCHASE NECESSARY.</strong> A purchase or payment of any kind will not increase your chances of winning. Void where prohibited by law.</p>
+      </div>
+    </div>
+
+    <!-- 1. Sponsor -->
+    <div class="section">
+      <h2><span class="icon">👤</span> 1. Sponsor</h2>
+      <p>The Weekly Photo Draw ("Contest") is sponsored and operated by Aashish Sapkota ("Sponsor"), an independent developer and sole operator of the Estes Park Guide app.</p>
+    </div>
+
+    <!-- 2. Eligibility -->
+    <div class="section">
+      <h2><span class="icon">✅</span> 2. Eligibility</h2>
+      <p>The Contest is open to legal residents of the United States who are 18 years of age or older at the time of entry. Employees of the Sponsor and their immediate family members are not eligible to participate.</p>
+    </div>
+
+    <!-- 3. Contest Period -->
+    <div class="section">
+      <h2><span class="icon">📅</span> 3. Contest Period</h2>
+      <p>Each weekly contest period runs from Monday at 12:00 AM Mountain Time through Sunday at 11:59 PM Mountain Time ("Contest Week"). The Contest is ongoing and the Sponsor reserves the right to discontinue it at any time with reasonable notice to users.</p>
+    </div>
+
+    <!-- 4. How to Enter -->
+    <div class="section">
+      <h2><span class="icon">📸</span> 4. How to Enter</h2>
+      <p>To enter, upload at least one photo (trail photo, business photo, or review photo) through the Estes Park Guide app during the Contest Week. Each qualifying photo upload counts as one entry. All photo uploads — including trail photos, business photos, and review photos — are eligible.</p>
+    </div>
+
+    <!-- 5. Winner Selection -->
+    <div class="section">
+      <h2><span class="icon">🎉</span> 5. Winner Selection &amp; Notification</h2>
+      <p>One winner is selected at random every Monday from all eligible entries received during the prior Contest Week. The winner will be notified via the email address associated with their Estes Park Guide account. If a winner does not respond within 7 days, a new winner may be selected.</p>
+    </div>
+
+    <!-- 6. Prize -->
+    <div class="section">
+      <h2><span class="icon">☕</span> 6. Prize</h2>
+      <p>Each weekly winner receives one (1) $10 Starbucks digital gift card, delivered via email. Prizes are non-transferable and may not be redeemed for cash. The Sponsor reserves the right to substitute a prize of equal or greater value at their sole discretion. The approximate retail value (ARV) of each prize is $10.00 USD.</p>
+    </div>
+
+    <!-- 7. Odds -->
+    <div class="section">
+      <h2><span class="icon">🎲</span> 7. Odds of Winning</h2>
+      <p>Odds of winning depend on the total number of eligible entries received during each Contest Week.</p>
+    </div>
+
+    <!-- 8. General Conditions -->
+    <div class="section">
+      <h2><span class="icon">📋</span> 8. General Conditions</h2>
+      <p>The Sponsor reserves the right to cancel, suspend, or modify the Contest if fraud, technical failures, or any other factor beyond the Sponsor's reasonable control impairs the integrity of the Contest. The Sponsor may disqualify any entrant who tampers with the entry process or violates these Official Rules.</p>
+      <p>By entering, participants agree to be bound by these Official Rules and the decisions of the Sponsor, which are final and binding.</p>
+    </div>
+
+    <!-- 9. Privacy -->
+    <div class="section">
+      <h2><span class="icon">🔒</span> 9. Privacy</h2>
+      <p>Information collected from entrants is subject to the Estes Park Guide <a href="index.html">Privacy Policy</a>. No personal information will be shared with third parties except as required to fulfill prizes or as required by law.</p>
+    </div>
+
+    <!-- 10. Governing Law -->
+    <div class="section">
+      <h2><span class="icon">⚖️</span> 10. Governing Law</h2>
+      <p>This Contest is governed by the laws of the United States. Any disputes shall be resolved in accordance with applicable federal and state law.</p>
+    </div>
+
+    <!-- 11. Apple Disclaimer -->
+    <div class="section">
+      <div class="warning-box">
+        <p><strong>11. Apple Disclaimer</strong></p>
+        <p style="margin-bottom: 0;">This Contest is <strong>not</strong> sponsored, endorsed, administered by, or associated with Apple Inc. in any way. All questions, comments, or complaints regarding the Contest should be directed to the Sponsor at <a href="mailto:estesparkvisit@gmail.com">estesparkvisit@gmail.com</a>, not to Apple.</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <h2><span class="icon">📧</span> Contact</h2>
+      <p>For questions about this Contest, please contact us:</p>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:estesparkvisit@gmail.com">estesparkvisit@gmail.com</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Estes Park Guide. All rights reserved.</p>
+    <p style="margin-top: 6px;"><a href="index.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="contest-rules.html">Contest Rules</a> · <a href="support.html">Support</a></p>
+  </footer>
+
+</body>
+</html>
